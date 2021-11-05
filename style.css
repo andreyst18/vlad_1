@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+html, body, p {
+    margin: 0px;
+    padding: 0px;
+    }
+
+body {
+    background-color: #f5f7fa;
+}
+
+.container {
+    margin-left: 23.9583%;
+    margin-right: 23.9583%;
+}
+
+.name {
+    font-size: 32px;
+    line-height: 21px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Montserrat";
+    margin-top: 113px;
+}
+
+.knowledge form {
+    margin-left: 39px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.knowledge {
+    width: 1000px;
+    height: 216px;
+    border-radius: 6px;
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.05));
+    background-color: #ffffff;
+    margin-top: 61px;
+}
+
+.knowledge div {
+    display: flex;
+    margin: 0px 12px 20px 0px;
+}
+
+.knowledge>.knowledge-title {
+    font-size: 22px;
+    line-height: 21px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Montserrat";
+    padding-top: 42px;
+    padding-left: 39px;
+    margin-bottom: 24px;
+}
+
+.knowledge p {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+    margin-right: 30px;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox+label::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: #e8ebed;
+    margin: 0px 12px 0px 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.custom-checkbox:checked+label::before {
+    background-image: url(images/Tick-icon.svg);
+    border-color: #1a7bff;
+    background-color: #1a7bff;
+}
+
