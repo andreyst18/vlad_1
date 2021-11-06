@@ -125,7 +125,7 @@ body {
 .notes {
     height: 184px;
     margin-top: 51px;
-    border-radius: 6px 6px 0px 0px;
+    /* border-radius: 6px 6px 0px 0px; */
 }
 
 .addNote-text {
@@ -149,6 +149,11 @@ body {
     font-weight: 400;
     font-family: "Montserrat";
     padding-left: 20px;
+    outline: none;
+}
+
+.addNote-text:focus {
+    color: #000;
 }
 
 .addNote-btn {
@@ -163,4 +168,38 @@ body {
     color: #ffffff;
     font-weight: 700;
     font-family: "Montserrat";
+}
+
+.notes-field {
+    /* display: none; */
+    display: flex;
+    width: 1000px;
+    max-height: 375px;
+    border-radius: 6px;
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.05));
+    background-color: #f5f7fa;
+}
+
+.notes-field-col {
+    width: 292px;
+    margin-top: 39px;
+    max-height: 295px;
+    background-color: olivedrab;
+}
+
+.col-1 {
+    margin-left: 40px;
+    margin-right: 21px;
+}
+
+.col-2 {
+    margin-right: 21px;
+}
+
+/* стиль добавленной заметки */
+.note-complete {
+    width: 292px;
+    height: 150px;
+    border-radius: 2px;
+    background-color: #ffffff;
 }
