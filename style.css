@@ -30,12 +30,17 @@ body {
     flex-wrap: wrap;
 }
 
-.knowledge {
+.knowledge, 
+.aboutMe,
+.notes {
     width: 1000px;
-    height: 216px;
     border-radius: 6px;
     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.05));
     background-color: #ffffff;
+}
+
+.knowledge {
+    height: 216px;
     margin-top: 61px;
 }
 
@@ -44,7 +49,8 @@ body {
     margin: 0px 0px 20px 0px;
 }
 
-.knowledge>.knowledge-title {
+.knowledge>.title,
+.title {
     font-size: 22px;
     line-height: 21px;
     color: #333333;
@@ -88,3 +94,73 @@ body {
     background-color: #1a7bff;
 }
 
+.aboutMe {
+    height: 279px;
+    margin-top: 50px;
+}
+
+.face {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    float: left;
+    margin-left: 40px;
+}
+
+.aboutMe-container {
+    margin-top: 31px;
+}
+
+.aboutMe-text {
+    width: 770px;
+    height: 173px;
+    font-size: 16px;
+    line-height: 27px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+    margin-left: 192px;
+}
+
+.notes {
+    height: 184px;
+    margin-top: 51px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.addNote-text {
+    width: 725px;
+    height: 55px;
+    border-radius: 2px;
+    background-color: #f5f7fa;
+    border: none;
+    margin-left: 40px;
+}
+
+.notes>.title {
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+.addNote-text[placeholder="Текст заметки"] {
+    font-size: 14px;
+    line-height: 27px;
+    color: #808080;
+    font-weight: 400;
+    font-family: "Montserrat";
+    padding-left: 20px;
+}
+
+.addNote-btn {
+    width: 180px;
+    height: 55px;
+    border-radius: 2px;
+    background-color: #1a7bff;
+    border: none;
+    margin-left: 15px;
+    font-size: 12px;
+    line-height: 27px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
