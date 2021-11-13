@@ -178,28 +178,33 @@ body {
     border-radius: 6px;
     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.05));
     background-color: #f5f7fa;
-}
-
-.notes-field-col {
-    width: 292px;
-    margin-top: 39px;
-    max-height: 295px;
-    background-color: olivedrab;
-}
-
-.col-1 {
-    margin-left: 40px;
-    margin-right: 21px;
-}
-
-.col-2 {
-    margin-right: 21px;
+    
 }
 
 /* стиль добавленной заметки */
 .note-complete {
-    width: 292px;
-    height: 150px;
+    
+    width: 252px;
     border-radius: 2px;
     background-color: #ffffff;
+    padding: 21px 20px 23px 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+
+.col-1 .note-complete {
+    margin-left: 40px;
+    margin-right: 21px;
+    margin-top: 23px;
+}
+
+.col-2 .note-complete {
+    margin-right: 21px;
+}
+
+.note-complete:first-child {
+    margin-top: 39px;
 }
