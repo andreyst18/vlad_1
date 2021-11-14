@@ -6,9 +6,10 @@ const columnOne = document.querySelector('.col-1')
 const columnTwo = document.querySelector('.col-2')
 const columnThree = document.querySelector('.col-3')
 const columns = [columnOne, columnTwo, columnThree]
+const newsBtns = document.querySelectorAll('.news-btn')
 
 let columnNumber //пер. для определения колонки, в которую будет добавлена заметка
-
+let xBtn
 // localStorage.clear()
 
 newNoteContent.value = ''
@@ -42,10 +43,15 @@ if (window.localStorage.length === 0) {
             } else {
                 note.innerHTML = arr_reload[i][j]
             }
+            addCross(note)
             columns[i].append(note)
         }
     }
 }
+
+xBtn = document.querySelectorAll('img[class="cross"]')
+// console.log(xBtn)
+
 
 addNoteBtn.addEventListener('click', () => {
     if (newNoteContent.value !== '') {
@@ -70,16 +76,37 @@ addNoteBtn.addEventListener('click', () => {
             columnNumber = 0
             localStorage.setItem('columnNumber', columnNumber)
         }
-    }   
+    }
 })
+
+
+xBtn.forEach(el => el.addEventListener('click', () => {
+    const currentNote = el.parentNode
+    currentNote.className = 'deletedNote'
+}))
 
 //Отрисовка добавленной заметки
 function addNote() {
     let note = document.createElement('div')
     note.className = 'note-complete'
     note.innerHTML = newNoteContent.value
+    addCross(note)
     columns[columnNumber].append(note)
+    xBtn = document.querySelectorAll('.cross')   
     newNoteContent.value = ''
+    notes.classList.add('notes-field-isNotEmpty')
 }
+
+function addCross(note) {
+    let cross = document.createElement('img')
+    cross.setAttribute('src', 'images/Cross-icon.svg')
+    cross.setAttribute('alt', 'cross')
+    cross.setAttribute('class', 'cross')
+    note.append(cross)
+}
+
+newsBtns.forEach(el => el.addEventListener('click', () => {
+    alert('clicked')
+}))
 
 // localStorage.clear()

@@ -33,7 +33,8 @@ body {
 .knowledge, 
 .aboutMe,
 .notes,
-.list {
+.list,
+.news {
     width: 1000px;
     border-radius: 6px;
     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.05));
@@ -193,6 +194,7 @@ body {
     color: #333333;
     font-weight: 400;
     font-family: "Montserrat";
+    position: relative;
 }
 
 .col-1 .note-complete {
@@ -247,4 +249,119 @@ body {
 
 .notes-field::-webkit-resizer {
     height: 335px;
+}
+
+.cross {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: fit-content;
+}
+
+.deletedNote {
+    display: none;
+}
+
+.list {
+    height: 328px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 27px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+    margin-left: 41px;
+    margin-bottom: 28px;
+}
+
+.list-item>p {
+    margin-left: 16px;
+}
+
+.list-item:last-child {
+    align-items: flex-start;
+    padding-bottom: 40px;
+}
+
+.list-item:last-child>img {
+    padding-top: 5px;
+}
+
+.news {
+    height: 542px;
+    margin-top: 50px;
+    margin-bottom: 77px;
+}
+
+.news-row {
+    display: flex;
+    padding-left: 41px;
+}
+
+.news-row:first-child {
+    padding-top: 39px;
+    margin-bottom: 22px;
+}
+
+.news-item {
+    width: 291px;
+    height: 219px;
+    background-color: cadetblue;
+    margin-right: 22px;
+    position: relative;
+}
+
+.news-row:last-child {
+    padding-bottom: 40px;
+}
+
+.news-item img {
+    width: 291px;
+    height: 219px;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+.news-title {
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    font-size: 10px;
+    line-height: 27px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+
+.news-content {
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    width: 252px;
+    height: 209px;
+    font-size: 16px;
+    line-height: 27px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+
+.news-btn {
+    position: absolute;
+    top: 165px;
+    left: 19px;
+    width: 114px;
+    height: 33px;
+    border-radius: 2px;
+    background-color: #1a7bff;
+    font-size: 12px;
+    line-height: 27px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    border: none;
 }
