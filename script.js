@@ -1,5 +1,6 @@
 const addNoteBtn = document.querySelector('.addNote-btn')
 const newNoteContent = document.querySelector('.addNote-text')
+const notes = document.querySelector('.notes')
 const notesField = document.querySelector('.notes-field')
 const columnOne = document.querySelector('.col-1')
 const columnTwo = document.querySelector('.col-2')
@@ -22,7 +23,8 @@ if (window.localStorage.length === 0) {
     }
 } else if (JSON.parse(localStorage.getItem('column 0')).length !== 0) {
     columnNumber = +localStorage.getItem('columnNumber')
-    
+    notes.classList.add('notes-field-isNotEmpty')
+
     //отрисовка заметок из ls при загрузке страницы
     let arr_reload = []
     let str_reload
@@ -46,25 +48,38 @@ if (window.localStorage.length === 0) {
 }
 
 addNoteBtn.addEventListener('click', () => {
-    columnNumber = +localStorage.getItem('columnNumber')
+    if (newNoteContent.value !== '') {
+        columnNumber = +localStorage.getItem('columnNumber')
 
-    let str = localStorage.getItem(`column ${columnNumber}`)
-    let arr = JSON.parse(str)
+        let str = localStorage.getItem(`column ${columnNumber}`)
+        let arr = JSON.parse(str)
 
-    if (arr.length === 0) {
-        arr[0] = newNoteContent.value
-    } else {
-        arr.push(newNoteContent.value)
-    }
-    localStorage.setItem(`column ${columnNumber}`, JSON.stringify(arr))
-    
-    if (columnNumber < 2) {
-        columnNumber += 1
-        localStorage.setItem('columnNumber', columnNumber)
-    } else {
-        columnNumber = 0
-        localStorage.setItem('columnNumber', columnNumber)
-    }
-
-    newNoteContent.value = ''
+        if (arr.length === 0) {
+            arr[0] = newNoteContent.value
+        } else {
+            arr.push(newNoteContent.value)
+        }
+        localStorage.setItem(`column ${columnNumber}`, JSON.stringify(arr))
+        
+        if (columnNumber < 2) {
+            addNote()
+            columnNumber += 1
+            localStorage.setItem('columnNumber', columnNumber)
+        } else {
+            addNote()
+            columnNumber = 0
+            localStorage.setItem('columnNumber', columnNumber)
+        }
+    }   
 })
+
+//Отрисовка добавленной заметки
+function addNote() {
+    let note = document.createElement('div')
+    note.className = 'note-complete'
+    note.innerHTML = newNoteContent.value
+    columns[columnNumber].append(note)
+    newNoteContent.value = ''
+}
+
+// localStorage.clear()

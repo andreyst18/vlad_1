@@ -32,7 +32,8 @@ body {
 
 .knowledge, 
 .aboutMe,
-.notes {
+.notes,
+.list {
     width: 1000px;
     border-radius: 6px;
     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.05));
@@ -125,7 +126,6 @@ body {
 .notes {
     height: 184px;
     margin-top: 51px;
-    /* border-radius: 6px 6px 0px 0px; */
 }
 
 .addNote-text {
@@ -175,15 +175,15 @@ body {
     display: flex;
     width: 1000px;
     max-height: 375px;
-    border-radius: 6px;
+    border-radius: 0px 0px 6px 6px;
     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.05));
     background-color: #f5f7fa;
+    overflow: auto;
     
 }
 
 /* стиль добавленной заметки */
 .note-complete {
-    
     width: 252px;
     border-radius: 2px;
     background-color: #ffffff;
@@ -203,8 +203,48 @@ body {
 
 .col-2 .note-complete {
     margin-right: 21px;
+    margin-top: 23px;
+}
+
+.col-3 .note-complete {
+    margin-top: 23px;
 }
 
 .note-complete:first-child {
     margin-top: 39px;
+}
+
+.note-complete:last-child {
+    margin-bottom: 39px;
+}
+
+.notes-field-isNotEmpty {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.list {
+    margin-top: 49px;
+}
+
+.notes-field::-webkit-scrollbar {
+    width: 4px;
+}
+
+.notes-field::-webkit-scrollbar-track {
+    background-color: #e6eaf0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    
+    
+}
+
+.notes-field::-webkit-scrollbar-thumb {
+    background-color: #1a7bff;
+    border-radius: 2px;
+    height: 73px;
+}
+
+.notes-field::-webkit-resizer {
+    height: 335px;
 }
