@@ -1,196 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт-визитка</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <p class="name">Стрелин Андрей Васильевич</p>
-        <div class="knowledge">
-            <p class="title">Стек знаний</p>
-            <form action="">
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="HTML 5" id="HTML 5" checked>
-                    <label for="HTML 5"></label>
-                    <p>HTML 5</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="CSS 3" id="CSS 3" checked>
-                    <label for="CSS 3"></label>
-                    <p>CSS 3</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="LESS" id="LESS">
-                    <label for="LESS"></label>
-                    <p>LESS</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="SCSS" id="SCSS">
-                    <label for="SCSS"></label>
-                    <p>SCSS</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="SASS" id="SASS">
-                    <label for="SASS"></label>
-                    <p>SASS</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Gulp" id="Gulp" checked>
-                    <label for="Gulp"></label>
-                    <p>Gulp</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="NodeJS" id="NodeJS">
-                    <label for="NodeJS"></label>
-                    <p>NodeJS</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Npm5" id="Npm">
-                    <label for="Npm"></label>
-                    <p>Npm</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Git" id="Git" checked>
-                    <label for="Git"></label>
-                    <p>Git</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="SVG" id="SVG">
-                    <label for="SVG"></label>
-                    <p>SVG</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="JS" id="JS" checked>
-                    <label for="JS"></label>
-                    <p>JS</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="jQuery" id="jQuery">
-                    <label for="jQuery"></label>
-                    <p>jQuery</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="PHP" id="PHP" checked>
-                    <label for="PHP"></label>
-                    <p>PHP</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Bitrix" id="Bitrix">
-                    <label for="Bitrix"></label>
-                    <p>Bitrix</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Maps API" id="Maps API">
-                    <label for="Maps API"></label>
-                    <p>Maps API</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="BEM" id="BEM">
-                    <label for="BEM"></label>
-                    <p>BEM</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Pixel perfect" id="Pixel perfect">
-                    <label for="Pixel perfect"></label>
-                    <p>Pixel perfect</p>
-                </div>
-                <div>
-                    <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Webpack" id="Webpack">
-                    <label for="Webpack"></label>
-                    <p>Webpack</p>
-                </div>
-            </form>
-        </div>
-        
-        <div class="aboutMe">
-            <p class="title">О себе</p>
-            <div class="aboutMe-container">
-                <img src="images/photo.png" alt="face" class="face">
-                <div class="aboutMe-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore recusandae eligendi eum autem deserunt consequatur fugiat sequi enim. Et, cupiditate. Maiores consequuntur quis voluptatibus dolorum perferendis numquam eveniet voluptatum pariatur.
-                    Ducimus natus eos, in mollitia omnis repudiandae obcaecati nobis quam numquam voluptas laboriosam et, illo autem modi, non a ipsum officia fugit eligendi temporibus ratione. Quisquam eius quaerat tempore provident!
-                </div>
-            </div>
-        </div>
 
-        <div class="notes">
-            <p class="title">Заметки о задании</p>
-            <form action="" class="addNote-form">
-                <input type="text" class="addNote-text" placeholder="Текст заметки">
-                <input type="button" class="addNote-btn" value="Добавить заметку">
-            </form>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт-визитка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <p class="name">Стрелин Андрей Васильевич</p>
+    <section class="knowledge">
+      <p class="title">Стек знаний</p>
+      <form action="">
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="HTML 5" id="HTML 5" checked>
+          <label for="HTML 5"></label>
+          <p>HTML 5</p>
         </div>
-        <div class="notes-field">
-            <div class="notes-field-col col-1"></div>
-            <div class="notes-field-col col-2"></div>
-            <div class="notes-field-col col-3"></div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="CSS 3" id="CSS 3" checked>
+          <label for="CSS 3"></label>
+          <p>CSS 3</p>
         </div>
-        <div class="list">
-            <p class="title">Список</p>
-            <div class="list-item">
-                <img src="images/icon1.svg" alt="t-short">
-                <p>Равным образом постоянный количественный рост и сфера.</p>
-            </div>
-            <div class="list-item">
-                <img src="images/icon2.svg" alt="clock">
-                <p>Задача организации, в особенности.</p>
-            </div>
-            <div class="list-item">
-                <img src="images/icon3.svg" alt="bag">
-                <p>Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности.</p>
-            </div>
-            <div class="list-item">
-                <img src="images/icon4.svg" alt="calendar">
-                <p>Таким образом консультация с широким активом требуют от нас анализа направлений прогрессивного развития. Равным образом рамки и место обучения кадров обеспечивает широкому кругу.</p>
-            </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="LESS" id="LESS">
+          <label for="LESS"></label>
+          <p>LESS</p>
         </div>
-        <div class="news">
-            <div class="news-row">
-                <div class="news-item">
-                    <a href="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80" alt=""></a>
-                    <p class="news-title">НОВОСТИ</p>
-                    <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
-                    <button class="news-btn">Подробнее</button>
-                </div>
-                <div class="news-item">
-                    <a href="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"><img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt=""></a>
-                    <p class="news-title">НОВОСТИ</p>
-                    <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
-                    <button class="news-btn">Подробнее</button>
-                </div>
-                <div class="news-item">
-                    <a href="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1274&q=80"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1274&q=80" alt=""></a>
-                    <p class="news-title">НОВОСТИ</p>
-                    <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
-                    <button class="news-btn">Подробнее</button>
-                </div>
-            </div>
-            <div class="news-row">
-                <div class="news-item">
-                    <a href="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"><img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt=""></a>
-                    <p class="news-title">НОВОСТИ</p>
-                    <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
-                    <button class="news-btn">Подробнее</button>
-                </div>
-                <div class="news-item">
-                    <a href="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80" alt=""></a>
-                    <p class="news-title">НОВОСТИ</p>
-                    <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
-                    <button class="news-btn">Подробнее</button>
-                </div>
-                <div class="news-item">
-                    <a href="https://images.unsplash.com/photo-1604537466158-719b1972feb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"><img src="https://images.unsplash.com/photo-1604537466158-719b1972feb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt=""></a>
-                    <p class="news-title">НОВОСТИ</p>
-                    <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
-                    <button class="news-btn">Подробнее</button>
-                </div>
-            </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="SCSS" id="SCSS">
+          <label for="SCSS"></label>
+          <p>SCSS</p>
         </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="SASS" id="SASS">
+          <label for="SASS"></label>
+          <p>SASS</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Gulp" id="Gulp" checked>
+          <label for="Gulp"></label>
+          <p>Gulp</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="NodeJS" id="NodeJS">
+          <label for="NodeJS"></label>
+          <p>NodeJS</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Npm5" id="Npm">
+          <label for="Npm"></label>
+          <p>Npm</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Git" id="Git" checked>
+          <label for="Git"></label>
+          <p>Git</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="SVG" id="SVG">
+          <label for="SVG"></label>
+          <p>SVG</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="JS" id="JS" checked>
+          <label for="JS"></label>
+          <p>JS</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="jQuery" id="jQuery">
+          <label for="jQuery"></label>
+          <p>jQuery</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="PHP" id="PHP" checked>
+          <label for="PHP"></label>
+          <p>PHP</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Bitrix" id="Bitrix">
+          <label for="Bitrix"></label>
+          <p>Bitrix</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Maps API" id="Maps API">
+          <label for="Maps API"></label>
+          <p>Maps API</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="BEM" id="BEM">
+          <label for="BEM"></label>
+          <p>BEM</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Pixel perfect" id="Pixel perfect">
+          <label for="Pixel perfect"></label>
+          <p>Pixel perfect</p>
+        </div>
+        <div class="skill">
+          <input type="checkbox" class="custom-checkbox" name="knowledge-list" value="Webpack" id="Webpack">
+          <label for="Webpack"></label>
+          <p>Webpack</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="aboutMe">
+      <p class="title">О себе</p>
+      <div class="aboutMe-container">
+        <div class="overlay"><img src="images/photo.png" alt="face" class="face"></div>
+        <div class="aboutMe-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore recusandae eligendi eum autem deserunt
+          consequatur fugiat sequi enim. Et, cupiditate. Maiores consequuntur quis voluptatibus dolorum perferendis
+          numquam eveniet voluptatum pariatur.
+          Ducimus natus eos, in mollitia omnis repudiandae obcaecati nobis quam numquam voluptas laboriosam et, illo
+          autem modi, non a ipsum officia fugit eligendi temporibus ratione. Quisquam eius quaerat tempore provident!
+        </div>
+      </div>
+    </section>
+
+    <section class="notes">
+      <p class="title">Заметки о задании</p>
+      <form action="" class="addNote-form">
+        <input type="text" class="addNote-text" placeholder="Текст заметки">
+        <input type="button" class="addNote-btn" value="Добавить заметку">
+      </form>
+    </section>
+    <section class="notes-field">
+      <div class="leftSpan"></div>
+      <div class="notes-field-col col-1"></div>
+      <div class="notes-field-col col-2"></div>
+      <div class="notes-field-col col-3"></div>
+    </section>
+    <section class="list">
+      <p class="title">Список</p>
+      <div class="list-item">
+        <img src="images/icon1.svg" alt="t-short">
+        <p>Равным образом постоянный количественный рост и сфера.</p>
+      </div>
+      <div class="list-item">
+        <img src="images/icon2.svg" alt="clock">
+        <p>Задача организации, в особенности.</p>
+      </div>
+      <div class="list-item">
+        <img src="images/icon3.svg" alt="bag">
+        <p>Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности.</p>
+      </div>
+      <div class="list-item">
+        <img src="images/icon4.svg" alt="calendar">
+        <p>Таким образом консультация с широким активом требуют от нас анализа направлений прогрессивного развития.
+          Равным образом рамки и место обучения кадров обеспечивает широкому кругу.</p>
+      </div>
+    </section>
+    <section class="news">
+      <div class="news-row">
+        <div class="news-item">
+          <a
+            href="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"><img
+              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+              alt=""></a>
+          <p class="news-title">НОВОСТИ</p>
+          <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
+          <button class="news-btn">Подробнее</button>
+        </div>
+        <div class="news-item">
+          <a
+            href="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"><img
+              src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+              alt=""></a>
+          <p class="news-title">НОВОСТИ</p>
+          <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
+          <button class="news-btn">Подробнее</button>
+        </div>
+        <div class="news-item">
+          <a
+            href="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1274&q=80"><img
+              src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1274&q=80"
+              alt=""></a>
+          <p class="news-title">НОВОСТИ</p>
+          <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
+          <button class="news-btn">Подробнее</button>
+        </div>
+      </div>
+      <div class="news-row">
+        <div class="news-item">
+          <a
+            href="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"><img
+              src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+              alt=""></a>
+          <p class="news-title">НОВОСТИ</p>
+          <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
+          <button class="news-btn">Подробнее</button>
+        </div>
+        <div class="news-item">
+          <a
+            href="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80"><img
+              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80"
+              alt=""></a>
+          <p class="news-title">НОВОСТИ</p>
+          <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
+          <button class="news-btn">Подробнее</button>
+        </div>
+        <div class="news-item">
+          <a
+            href="https://images.unsplash.com/photo-1604537466158-719b1972feb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"><img
+              src="https://images.unsplash.com/photo-1604537466158-719b1972feb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+              alt=""></a>
+          <p class="news-title">НОВОСТИ</p>
+          <p class="news-content">Не следует, однако забывать, что постоянный количественный.</p>
+          <button class="news-btn">Подробнее</button>
+        </div>
+      </div>
     </div>
-<script src="script.js"></script>      
+  </section>
+  <script src="script.js"></script>
 </body>
+
 </html>
