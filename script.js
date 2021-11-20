@@ -7,8 +7,9 @@ const columnTwo = document.querySelector('.col-2')
 const columnThree = document.querySelector('.col-3')
 const columns = [columnOne, columnTwo, columnThree]
 const newsBtns = document.querySelectorAll('.news-btn')
+const checkboxTitle = document.querySelectorAll('.checkbox-title')
 
-let columnNumber //пер. для определения колонки, в которую будет добавлена заметка
+let columnNumber
 let xBtn
 let noteID
 let content
@@ -21,13 +22,15 @@ if (window.localStorage.length === 0) {
   columnNumber = 0
   noteID = 0
   localStorage.setItem('columnNumber', columnNumber)
+  localStorage.setItem('lastID', noteID)
 
   // добавление пустых массивов в ls
   for (let i = 0; i < 3; i++) {
     localStorage.setItem(`column ${i}`, '[]')
   }
-} else if (JSON.parse(localStorage.getItem('column 0')).length !== 0) {
+} else { 
   columnNumber = +localStorage.getItem('columnNumber')
+  noteID = +localStorage.getItem('lastID')
   notes.classList.add('notes-field-isNotEmpty')
 
   //отрисовка заметок из ls при загрузке страницы
@@ -54,19 +57,15 @@ if (window.localStorage.length === 0) {
   }
 }
 
-xBtn = document.querySelectorAll('img[class="cross"]')
-// console.log(xBtn)
-
-
 addNoteBtn.addEventListener('click', () => {
   if (newNoteContent.value !== '') {
     columnNumber = +localStorage.getItem('columnNumber')
 
     let str = localStorage.getItem(`column ${columnNumber}`)
     let arr = JSON.parse(str)
-    console.log(arr)
-    console.log(columnNumber)
-
+    
+    noteID = +localStorage.getItem('lastID')
+    
     let note = {
       id: noteID++,
       'content': newNoteContent.value
@@ -76,7 +75,6 @@ addNoteBtn.addEventListener('click', () => {
       arr[0] = note
     } else {
       arr.push(note)
-
     }
     localStorage.setItem(`column ${columnNumber}`, JSON.stringify(arr))
 
@@ -92,14 +90,55 @@ addNoteBtn.addEventListener('click', () => {
   }
 })
 
+//Отрисовка добавленной заметки
+function addNote() {
+  let note = document.createElement('div')
+  note.className = 'note-complete'
+  note.innerHTML = newNoteContent.value
+  
+  note.setAttribute('id', noteID - 1)
+  
+  addCross(note)
+  columns[columnNumber].append(note)
+  newNoteContent.value = ''
+  notes.classList.add('notes-field-isNotEmpty')
+  localStorage.setItem('lastID', noteID)
+}
 
-xBtn.forEach(el => el.addEventListener('click', () => {
+function addCross(note) {
+  let cross = document.createElement('img')
+  cross.setAttribute('src', 'images/cross-icon.svg')
+  cross.setAttribute('alt', 'cross')
+  cross.classList.add('cross')
+  note.append(cross)
+}
+
+newsBtns.forEach(el => el.addEventListener('click', () => {
+  alert('clicked')
+}))
+
+checkboxTitle.forEach(el => el.addEventListener('click', () => {
+  const skill = el.parentNode
+  const checkBox = skill.querySelector('.custom-checkbox')
+  const label = skill.querySelector('label')
+  if (checkBox.getAttribute('checked') === '') {
+    label.classList.toggle('titleDisabled')
+  } else {
+    label.classList.toggle('titleEnabled')
+  }
+}))
+
+notesField.onclick = function(event) {
+  if (event.target.classList.contains('cross')) {
+    deleteNote(event.target)
+  }
+}
+
+function deleteNote(el) {
   const currentNote = el.parentNode
   const nextNode = currentNote.nextSibling
   const prevNote = currentNote.previousSibling
-
   currentNote.className = 'deletedNote'
-
   if ((!prevNote || prevNote.classList.contains('deletedNote')) && nextNode !== null) {
     nextNode.style.marginTop = '39px';
   }
@@ -114,45 +153,19 @@ xBtn.forEach(el => el.addEventListener('click', () => {
     currentColumn += ' 2'
   }
 
-  // console.log(currentColumn)
-
   let str = localStorage.getItem(`${currentColumn}`)
   let arr = JSON.parse(str)
+
+  console.log(arr)
     
   for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i].id)
+    console.log(currentNote.id)
     if (arr[i].id == currentNote.id) {
-      // console.log(arr[i])
       arr.splice(i, 1)
     }
   }
   localStorage.setItem(`${currentColumn}`, JSON.stringify(arr))
-
-  // console.log(arr)
-
-}))
-
-//Отрисовка добавленной заметки
-function addNote() {
-  let note = document.createElement('div')
-  note.className = 'note-complete'
-  note.innerHTML = newNoteContent.value
-  addCross(note)
-  columns[columnNumber].append(note)
-  xBtn = document.querySelectorAll('.cross')
-  newNoteContent.value = ''
-  notes.classList.add('notes-field-isNotEmpty')
 }
-
-function addCross(note) {
-  let cross = document.createElement('img')
-  cross.setAttribute('src', 'images/Cross-icon.svg')
-  cross.setAttribute('alt', 'cross')
-  cross.setAttribute('class', 'cross')
-  note.append(cross)
-}
-
-newsBtns.forEach(el => el.addEventListener('click', () => {
-  alert('clicked')
-}))
 
 // localStorage.clear()

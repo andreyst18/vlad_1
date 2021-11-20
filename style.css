@@ -86,7 +86,8 @@ body {
   opacity: 0;
 }
 
-.custom-checkbox+label::before {
+.custom-checkbox + label::before
+ {
   content: '';
   display: block;
   width: 16px;
@@ -100,8 +101,40 @@ body {
   cursor: pointer;
 }
 
-.custom-checkbox:checked+label::before {
-  background-image: url(images/Tick-icon.svg);
+.custom-checkbox:checked + label:before {
+  background-image: url(images/tick-icon.svg);
+  border-color: #1a7bff;
+  background-color: #1a7bff;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked + .titleDisabled::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: #e8ebed;
+  margin: 0px 12px 0px 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  cursor: pointer;
+  background-image: none;
+  border-color: none;
+}
+
+.custom-checkbox + .titleEnabled::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  margin: 0px 12px 0px 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  background-image: url(images/tick-icon.svg);
   border-color: #1a7bff;
   background-color: #1a7bff;
   cursor: pointer;
@@ -143,7 +176,7 @@ body {
 }
 
 .addNote-text {
-  width: 725px;
+  width: 72.5%;
   height: 55px;
   border-radius: 2px;
   background-color: #f5f7fa;
@@ -182,6 +215,7 @@ body {
   color: #ffffff;
   font-weight: 700;
   font-family: "Montserrat";
+  cursor: pointer;
 }
 
 .notes-field {
@@ -377,6 +411,7 @@ body {
   font-weight: 700;
   font-family: "Montserrat";
   border: none;
+  cursor: pointer;
 }
 
 .leftSpan {
